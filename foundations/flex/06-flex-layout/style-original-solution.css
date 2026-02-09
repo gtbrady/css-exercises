@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  font-family: Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;   /* No justify-content here on the solution */
+  
+}
+
+img {
+  width: 600px;
+}
+
+button {
+  font-family: Roboto, sans-serif;
+  border: none;
+  border-radius: 8px;
+  background: #eee;
+  padding: 12px; /* Solution padding was "padding: 8px 16px;"   */
+}
+
+input {
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 8px 24px;
+  width: 400px;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  
+  color: #828180; /* Solution had #666 */
+  font-weight: 500; /* Solution had used no/default font-weight (which is 400)*/
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+/* I can use a grouping selector here for the header/footer to be more efficient */
+.footer {
+  background-color: #eeeeee;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+/* Then just use a .footer class for the background*/
+
+.content {
+  /* Solution had "flex: 1;" */
+  /* ^^does this achieve same thing as body | justify-content: space-between 
+  I had above? */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.left-links,.right-links {
+  /* Solution used ul for these, and also updated list-style, margin, padding. 
+  More efficient to do it that way. */
+  
+   display: flex;
+   gap: 16px;
+}
